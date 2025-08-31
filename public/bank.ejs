@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Application</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #f5f7fa;
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background: #fff;
+        max-width: 450px;
+        margin: 60px auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        padding: 40px 30px 30px 30px;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #222;
+      }
+      .title span {
+        margin-right: 12px;
+        font-size: 2.2rem;
+      }
+      .balance {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #388e3c;
+        margin-bottom: 25px;
+      }
+      .balance span {
+        margin-right: 8px;
+        font-size: 1.3rem;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .input-group input[type="number"] {
+        width: 100%;
+        max-width: 320px;
+        padding: 10px 15px;
+        border: 1.5px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-bottom: 18px;
+        outline: none;
+        transition: border 0.2s;
+      }
+      .input-group input[type="number"]:focus {
+        border: 1.5px solid #388e3c;
+      }
+      .btn-group {
+        display: flex;
+        gap: 18px;
+        margin-bottom: 20px;
+      }
+      .btn {
+        background: #5b8def;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 32px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .btn:hover {
+        background: #4176d6;
+      }
+      .history {
+        background: #fafbfc;
+        border-radius: 12px;
+        border: 1.5px solid #e0e0e0;
+        margin-top: 10px;
+        padding: 18px 18px 12px 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+      }
+
+      .history-title {
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        background: #fff;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+      }
+
+      th,
+      td {
+        padding: 12px 18px;
+        text-align: left;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        text-align: center;
+        font-size: 12px;
+        background: #f5f7fa;
+        color: #333;
+        font-weight: 700;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      tr:nth-child(even) {
+        background: #f9fafb;
+      }
+
+      tr:hover {
+        background: #e3f0ff;
+      }
+
+      td {
+        font-size: 10px;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .holder{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 0px;
+        color: rgb(9, 58, 130);
+        font-weight: 800;
+        margin-bottom: 0px;
+      }
+
+      .btn2{
+        padding: 6px 15px;
+        cursor: pointer;
+        border-radius: 15px;
+        margin-left: 10px;
+        background-color: #ed5459;
+      }
+
+      .Account-controls {
+        display: flex;
+        flex-direction: column;
+        row-gap: 9px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title"><span>🏦</span> Bank Application</div>
+      <div class="Account-controls">
+        <p class="holder">Account holder : Gaurav</p>
+        <div>
+          <a href="/logout"><button class="btn2">Logout</button></a>
+          <a href="/delacc"><button class="btn2">Delete Account</button></a>
+        </div>
+      </div>
+      <div class="balance" id="bal"></div>
+      <form class="input-group" autocomplete="off">
+        <input type="number" placeholder="Enter amount" name="amount" id="am" />
+        <div class="btn-group">
+          <button type="button" class="btn" onclick="deposit();">
+            Deposit
+          </button>
+          <button type="button" class="btn" onclick="withdraw();">
+            Withdraw
+          </button>
+        </div>
+        <div id="msg" style="color: seagreen; font-weight: 600"></div>
+      </form>
+      <div class="history">
+          Transaction History
+          <div class="history-title" id="this"></div>
+      </div>
+    </div>
+    <script>
+      let allhistory = [];
+      function getcurrentbal(f) {
+        let t = 0;
+        f.forEach((trans) => {
+          if (trans["type"] == 1) {
+            t += trans["amount"];
+          } else {
+            t -= trans["amount"];
+          }
+        });
+        return t;
+      }
+
+      function gethistory() {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.status == 200 && this.readyState == 4) {
+            data = JSON.parse(this.responseText)["result"];
+            if (data.length == 0) {
+              document.getElementById(
+                "bal"
+              ).innerHTML = `<span>💰</span> Current Balance: ₹<span style="margin-left:6px;" id="balanceAmount">0</span>`;
+              document.getElementById("this").innerHTML = `
+                    <table>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Timestamp</th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">No Transactions found</td>
+                        </tr>
+                    </table>
+                `;
+            } else {
+              const n = getcurrentbal(data);
+              document.getElementById(
+                "bal"
+              ).innerHTML = `<span>💰</span> Current Balance: ₹<span style="margin-left:6px;" id="balanceAmount">${n}</span>`;
+              let table = `
+                    <table>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Timestamp</th>
+                        <tr>
+                `;
+              data.slice().reverse().forEach((obj) => {
+                table += `
+                        <tr>
+                            <td>${obj["type"] == 1 ? "+"+obj["amount"] : "-"+obj["amount"]}</td>
+                            <td>${
+                              obj["type"] == 1 ? "Deposited" : "Withdrew"
+                            }</td>
+                            <td>${obj["date"]}</td>
+                        </tr>
+                    `;
+              });
+              table += `</table>`;
+              document.getElementById("this").innerHTML = table;
+            }
+          }
+        };
+        xhr.open("GET", "/history", true);
+        xhr.send();
+      }
+
+      function deposit() {
+        const amount = document.getElementById("am").value;
+        if (Number(amount) <= 0) {
+          document.getElementById("msg").innerHTML =
+            "Amount should be greater than 0";
+          return;
+        }
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.status == 201 && this.readyState == 4) {
+            document.getElementById("msg").innerHTML = "Deposit successful";
+            gethistory();
+          }
+        };
+        xhr.open("POST", "/add", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify({ amount: Number(amount), type: 1 }));
+      }
+
+      function withdraw() {
+        const amount = document.getElementById("am").value;
+        if (Number(amount) <= 0) {
+          document.getElementById("msg").innerHTML =
+            "Amount should be greater than 0";
+          return;
+        }
+        if (
+          Number(amount) >
+          Number(document.getElementById("balanceAmount").innerText)
+        ) {
+          document.getElementById("msg").innerHTML = "Insufficient balance";
+          return;
+        }
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.status == 201 && this.readyState == 4) {
+            document.getElementById("msg").innerHTML = "withdrawal successful";
+            gethistory();
+          }
+        };
+        xhr.open("POST", "/add", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify({ amount: Number(amount), type: 2 }));
+      }
+
+      window.onload = gethistory;
+    </script>
+  </body>
+</html>

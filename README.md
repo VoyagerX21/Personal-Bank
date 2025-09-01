@@ -1,22 +1,4 @@
-<p align="center">
-    <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" align="center" width="30%">
-</p>
-<p align="center"><h1 align="center">PERONAL-BANK</h1></p>
-<p align="center">
-	<em><code>❯ REPLACE-ME</code></em>
-</p>
-<p align="center">
-	<img src="https://img.shields.io/github/license/VoyagerX21/Peronal-Bank?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/VoyagerX21/Peronal-Bank?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/VoyagerX21/Peronal-Bank?style=default&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/VoyagerX21/Peronal-Bank?style=default&color=0080ff" alt="repo-language-count">
-</p>
-<p align="center"><!-- default option, no dependency badges. -->
-</p>
-<p align="center">
-	<!-- default option, no dependency badges. -->
-</p>
-<br>
+<p align="center"><h1 align="center">PERSONAL-BANK</h1></p>
 
 ## 🔗 Table of Contents
 
@@ -28,28 +10,35 @@
   - [☑️ Prerequisites](#-prerequisites)
   - [⚙️ Installation](#-installation)
   - [🤖 Usage](#🤖-usage)
-  - [🧪 Testing](#🧪-testing)
-- [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
 
 ---
 
-## 📍 Overview
+## 📍 Overview  
 
-<code>❯ REPLACE-ME</code>
+This is a **basic personal banking web application** where users can securely create and manage their accounts.  
+It provides a simple, real-time banking experience with features like deposits, withdrawals, and transaction history.  
+
+The application is built using **Node.js, EJS, AJAX, and JWT** to demonstrate secure authentication, session handling, and seamless user interactions without page reloads.  
+
+---
+
+## 👾 Features  
+
+- 🔑 **User Authentication** – Register with a unique username & password, and log in securely using JWT.  
+- 💰 **Deposit & Withdraw** – Manage balance with real-time updates via AJAX (no reloads).  
+- 📊 **Transaction History** – Instantly updated list of all past transactions.  
+- 🚪 **Logout** – End sessions securely at any time.  
+- ❌ **Delete Account** – Option to permanently remove the account.  
+- ⚡ **Real-time UI Updates** – Smooth user experience powered by AJAX and EJS.  
 
 ---
 
-## 👾 Features
-
-<code>❯ REPLACE-ME</code>
-
----
 
 ## 📁 Project Structure
 
 ```sh
-└── Peronal-Bank/
+└── personal-Bank/
     ├── auth.js
     ├── db.js
     ├── db.json
@@ -66,37 +55,37 @@
 
 ### 📂 Project Index
 <details open>
-	<summary><b><code>PERONAL-BANK/</code></b></summary>
+	<summary><b><code>personal-BANK/</code></b></summary>
 	<details> <!-- __root__ Submodule -->
 		<summary><b>__root__</b></summary>
 		<blockquote>
 			<table>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/package-lock.json'>package-lock.json</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/package-lock.json'>package-lock.json</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/router.js'>router.js</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/router.js'>router.js</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/db.json'>db.json</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/db.json'>db.json</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/index.js'>index.js</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/index.js'>index.js</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/package.json'>package.json</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/package.json'>package.json</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/auth.js'>auth.js</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/auth.js'>auth.js</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/db.js'>db.js</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/db.js'>db.js</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			</table>
@@ -107,15 +96,15 @@
 		<blockquote>
 			<table>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/public/bank.ejs'>bank.ejs</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/public/bank.ejs'>bank.ejs</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/public/login.ejs'>login.ejs</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/public/login.ejs'>login.ejs</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
-				<td><b><a href='https://github.com/VoyagerX21/Peronal-Bank/blob/master/public/registration.ejs'>registration.ejs</a></b></td>
+				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/public/registration.ejs'>registration.ejs</a></b></td>
 				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			</table>
@@ -128,7 +117,7 @@
 
 ### ☑️ Prerequisites
 
-Before getting started with Peronal-Bank, ensure your runtime environment meets the following requirements:
+Before getting started with personal-Bank, ensure your runtime environment meets the following requirements:
 
 - **Programming Language:** JavaScript
 - **Package Manager:** Npm
@@ -136,18 +125,18 @@ Before getting started with Peronal-Bank, ensure your runtime environment meets 
 
 ### ⚙️ Installation
 
-Install Peronal-Bank using one of the following methods:
+Install personal-Bank using one of the following methods:
 
 **Build from source:**
 
-1. Clone the Peronal-Bank repository:
+1. Clone the personal-Bank repository:
 ```sh
-❯ git clone https://github.com/VoyagerX21/Peronal-Bank
+❯ git clone https://github.com/VoyagerX21/personal-Bank
 ```
 
 2. Navigate to the project directory:
 ```sh
-❯ cd Peronal-Bank
+❯ cd personal-Bank
 ```
 
 3. Install the project dependencies:
@@ -159,32 +148,21 @@ Install Peronal-Bank using one of the following methods:
 ❯ npm install
 ```
 
-
-
-
 ### 🤖 Usage
-Run Peronal-Bank using the following command:
+Run personal-Bank using the following command:
 **Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
 ❯ npm start
 ```
 
-
----
-## 📌 Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
 ---
 
 ## 🔰 Contributing
 
-- **💬 [Join the Discussions](https://github.com/VoyagerX21/Peronal-Bank/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/VoyagerX21/Peronal-Bank/issues)**: Submit bugs found or log feature requests for the `Peronal-Bank` project.
-- **💡 [Submit Pull Requests](https://github.com/VoyagerX21/Peronal-Bank/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **💬 [Join the Discussions](https://github.com/VoyagerX21/personal-Bank/discussions)**: Share your insights, provide feedback, or ask questions.
+- **🐛 [Report Issues](https://github.com/VoyagerX21/personal-Bank/issues)**: Submit bugs found or log feature requests for the `personal-Bank` project.
+- **💡 [Submit Pull Requests](https://github.com/VoyagerX21/personal-Bank/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
 <summary>Contributing Guidelines</summary>
@@ -192,7 +170,7 @@ Run Peronal-Bank using the following command:
 1. **Fork the Repository**: Start by forking the project repository to your github account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone https://github.com/VoyagerX21/Peronal-Bank
+   git clone https://github.com/VoyagerX21/personal-Bank
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
@@ -215,8 +193,8 @@ Run Peronal-Bank using the following command:
 <summary>Contributor Graph</summary>
 <br>
 <p align="left">
-   <a href="https://github.com{/VoyagerX21/Peronal-Bank/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=VoyagerX21/Peronal-Bank">
+   <a href="https://github.com{/VoyagerX21/personal-Bank/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=VoyagerX21/personal-Bank">
    </a>
 </p>
 </details>

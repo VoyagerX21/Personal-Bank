@@ -40,6 +40,17 @@
           "date": "2025-08-31T18:05:54.314Z"
         }
       ]
+    },
+    {
+      "username": "ayush_092005",
+      "password": "$2b$10$wJlkFEEa.RFgQLD.k85iD.veHRhOZ9hxJgiC.xZOGW72yqvEySlpe",
+      "history": [
+        {
+          "amount": 12,
+          "type": 1,
+          "date": "2025-09-01T12:36:32.814Z"
+        }
+      ]
     }
   ]
 }

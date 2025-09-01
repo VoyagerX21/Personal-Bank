@@ -62,31 +62,24 @@ The application is built using **Node.js, EJS, AJAX, and JWT** to demonstrate se
 			<table>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/package-lock.json'>package-lock.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/router.js'>router.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/db.json'>db.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/index.js'>index.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/package.json'>package.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/auth.js'>auth.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/db.js'>db.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			</table>
 		</blockquote>
@@ -97,15 +90,12 @@ The application is built using **Node.js, EJS, AJAX, and JWT** to demonstrate se
 			<table>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/public/bank.ejs'>bank.ejs</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/public/login.ejs'>login.ejs</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/VoyagerX21/personal-Bank/blob/master/public/registration.ejs'>registration.ejs</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
 			</tr>
 			</table>
 		</blockquote>
@@ -160,9 +150,7 @@ Run personal-Bank using the following command:
 
 ## 🔰 Contributing
 
-- **💬 [Join the Discussions](https://github.com/VoyagerX21/personal-Bank/discussions)**: Share your insights, provide feedback, or ask questions.
 - **🐛 [Report Issues](https://github.com/VoyagerX21/personal-Bank/issues)**: Submit bugs found or log feature requests for the `personal-Bank` project.
-- **💡 [Submit Pull Requests](https://github.com/VoyagerX21/personal-Bank/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
 <summary>Contributing Guidelines</summary>

@@ -36,8 +36,15 @@ module.exports = {
         return user ? user["password"] : undefined;
     },
     getall: () => data["users"],
+    getallNames: () => {
+        let res = [];
+        data["users"].forEach(u => {
+            res.push(u.username);
+        });
+        return res;
+    },
     deleteUser: (username) => {
         data["users"] = data["users"].filter(u => u["username"] !== username);
         savefile();
-    }
+    },
 }

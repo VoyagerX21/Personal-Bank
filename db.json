@@ -1,56 +1,14 @@
 {
   "users": [
     {
-      "username": "VoyagrX21",
-      "password": "$2b$10$EvsyEZi4etI.mJ5gEaYf8e/Fw9sBf3GCJn8Kx.IcFB44y/les2oiK",
-      "history": []
-    },
-    {
-      "username": "VoyagerX21",
-      "password": "$2b$10$ewRSTUJHfJiG7/Z7fuSv8OU2mdG/MkVxTp8lNUzN7cWCCTgjN0oji",
-      "history": []
-    },
-    {
       "username": "Gaurav",
       "password": "$2b$10$XCaJ2sLACuXtibrFjrXkue0AlFcR1biqDxTKredr1xmZ/g1Y6ehh6",
-      "history": [
-        {
-          "amount": 12,
-          "type": 1,
-          "date": "2025-08-31T15:55:25.031Z"
-        },
-        {
-          "amount": 21,
-          "type": 1,
-          "date": "2025-08-31T15:58:37.925Z"
-        },
-        {
-          "amount": 4,
-          "type": 2,
-          "date": "2025-08-31T15:58:44.294Z"
-        },
-        {
-          "amount": 11,
-          "type": 1,
-          "date": "2025-08-31T18:05:40.017Z"
-        },
-        {
-          "amount": 10,
-          "type": 2,
-          "date": "2025-08-31T18:05:54.314Z"
-        }
-      ]
+      "history": []
     },
     {
       "username": "ayush_092005",
       "password": "$2b$10$wJlkFEEa.RFgQLD.k85iD.veHRhOZ9hxJgiC.xZOGW72yqvEySlpe",
-      "history": [
-        {
-          "amount": 12,
-          "type": 1,
-          "date": "2025-09-01T12:36:32.814Z"
-        }
-      ]
+      "history": []
     }
   ]
 }

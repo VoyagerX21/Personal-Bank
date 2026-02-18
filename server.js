@@ -14,7 +14,7 @@ app.set("views", path.join(__dirname, "public"));
 app.use(express.static(path.join(__dirname, "./public")));
 app.use("/", router);
 
-PORT = process.env.PORT || 5500;
+PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server started at: http://localhost:${PORT}`);
 });
